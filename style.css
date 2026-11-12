@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+header {
+    background-color: #111111;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 4px solid #e60000;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header h1 span {
+    color: #e60000;
+}
+
+header p {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin-top: 5px;
+    letter-spacing: 3px;
+}
+
+
+.titulo {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.titulo h2 {
+    font-size: 25px;
+    color: #111111;
+}
+
+.titulo p {
+    color: #777777;
+    margin-top: 8px;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    align-items: flex-start;
+    margin: auto;
+    padding: 20px;
+}
+
+.layout input {
+    display: none;
+}
+
+.menu {
+    width: 260px;
+    min-width: 220px;
+    background-color: #111111;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.menu h3 {
+    color: #e60000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu label {
+    display: block;
+    background-color: #292929;
+    color: white;
+    padding: 13px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu label:hover {
+    background-color: #555555;
+}
+
+#g1:checked ~ .menu label[for="g1"],
+#g2:checked ~ .menu label[for="g2"],
+#g3:checked ~ .menu label[for="g3"],
+#g4:checked ~ .menu label[for="g4"],
+#g5:checked ~ .menu label[for="g5"],
+#g6:checked ~ .menu label[for="g6"],
+#g7:checked ~ .menu label[for="g7"],
+#g8:checked ~ .menu label[for="g8"],
+#g9:checked ~ .menu label[for="g9"],
+#g10:checked ~ .menu label[for="g10"] {
+    background-color: #e60000;
+}
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    background-color:white;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #e60000;
+}
+
+.perfil {
+    display: none;
+}
+
+#g1:checked ~ .conteudo .perfil1,
+#g2:checked ~ .conteudo .perfil2,
+#g3:checked ~ .conteudo .perfil3,
+#g4:checked ~ .conteudo .perfil4,
+#g5:checked ~ .conteudo .perfil5,
+#g6:checked ~ .conteudo .perfil6,
+#g7:checked ~ .conteudo .perfil7,
+#g8:checked ~ .conteudo .perfil8,
+#g9:checked ~ .conteudo .perfil9,
+#g10:checked ~ .conteudo .perfil10 {
+    display: block;
+}
+
+
+.foto {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    background-color: #222222;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    display: block;
+}
+
+.estatuto {
+    color: #e60000;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.perfil h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+.descricao {
+    background-color: #eeeeee;
+    padding: 20px;
+    border-left: 4px solid #e60000;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.descricao h3,
+.video h3 {
+    margin-bottom: 12px;
+    color: #222222;
+    
+}
+
+.descricao p {
+    color: #555555;
+    line-height: 1.7;
+}
+
+.video {
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    
+    
+}
+
+footer {
+    background-color: #111111;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    .layout {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .menu {
+        width: 100%;
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    .menu label {
+        display: inline-block;
+        margin-right: 3px;
+        font-size: 12px;
+    }
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    .foto {
+        height: 230px;
+    }
+
+    .perfil h2 {
+        font-size: 24px;
+    }
+
+    .titulo h2 {
+        font-size: 21px;
+    }
+
+
+.video video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    display: block;
+}
+  
+}
